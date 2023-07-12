@@ -1,0 +1,661 @@
+                          /* ~   S       T      A      R      T   ~ */
+
+:root {
+    /* Colors */
+    --bg-layer: 0, 0, 0;
+
+    /* Fonts */
+    --ff-primary:'Poppins', sans-serif;
+    --ff-secondary:'Montserrat', sans-serif;
+}
+
+body{
+    font-family: var(--ff-primary);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: var(--ff-secondary);
+}
+
+                            /* *  H3 & After  * */
+#services h3,
+#works h3,
+#clients h3,
+#team h3,
+#contact h3{
+    color: rgb(52, 52, 52);
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#services h3::after,
+#works h3::after,
+#clients h3::after,
+#team h3::after,
+#contact h3::after{
+    content: "";
+    position: absolute;
+    background-image: url('../imgs/dots.png');
+    width: 100%;
+    height: 30px;
+    bottom: -10px;
+    left: 0;
+    z-index: -1;
+}
+                           /* *  H3 & After  * */
+
+/* ----------------------------------------------------------------------------------------------------- */
+                         /* & Start Nav Section & */
+nav .navbar-brand{
+    font-family: var(--ff-secondary);
+}
+
+nav .navbar-nav .nav-link.active{
+    position: relative;
+    padding-bottom: 0;
+}
+
+nav .navbar-nav .nav-link::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    transition: all 0.3s;
+}
+
+nav .navbar-nav .nav-link.active::after{
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    left: 0;
+
+    bottom: 0;
+}
+
+nav .nav-link{
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin: 0 12px;
+}
+
+
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .nav-link {
+    color: black
+}
+
+nav .navbar-toggler{
+    border: none;
+}
+
+nav .navbar-toggler:focus
+{
+    box-shadow: none;
+}
+
+@media screen and (max-width:768px){
+    nav .navbar-collapse{
+        background-color: #fff;
+        text-align: center;
+        height: 50vh;
+    }
+
+    nav .nav-item{
+        margin-top:1.1rem;
+        font-size: 0.8125rem;
+    }
+}
+
+                             /* & End Nav Section & */
+/* ---------------------------------------------------------------------------------------------------- */
+
+                            /* & Start Home Section & */
+#home {
+    background-image: linear-gradient(rgba(var(--bg-layer), 0.65), rgba(var(--bg-layer), 0.65)), url('../imgs/bg.jpg');
+    /* background-position: center; */
+    background-size: cover;
+}
+
+#home .home-content h5{
+    font-size: 3.125rem;
+}
+
+#home .home-content .h1-home{
+    font-size: 60px;
+    font-weight: 200;
+    font-style: italic;
+    position: relative;
+}
+
+#home .home-content .h1-home::after{
+    content: "|";
+    font-weight: 500;
+    font-size: 60px;
+    font-style: normal;
+    animation-name: typing-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing-animation{
+                          /* ! Start Animation ! */
+0%{content: "Larry Daniels |";}
+17%{content: "Larry Daniels |";}
+18%{content: "Larry Daniel |";}
+19%{content: "Larry Danie |";}
+20%{content: "Larry Dani |";}
+21%{content: "Larry Dan |";}
+22%{content: "Larry Da |";}
+23%{content: "Larry D |";}
+24%{content: "Larry |";}
+25%{content: "Larr |";}
+26%{content: "Lar |";}
+27%{content: "La |";}
+28%{content: "L |";}
+29%{content: "D |";}
+30%{content: "De |";}
+31%{content: "Dev |";}
+32%{content: "Deve |";}
+33%{content: "Devel |";}
+34%{content: "Develo |";}
+35%{content: "Develop |";}
+36%{content: "Develope |";}
+37%{content: "Developer |";}
+50%{content: "Developer |";}
+51%{content: "Develope |";}
+52%{content: "Develop |";}
+53%{content: "Develo |";}
+54%{content: "Devel |";}
+55%{content: "Deve |";}
+56%{content: "Dev |";}
+57%{content: "De |";}
+58%{content: "D |";}
+59%{content: "|";}
+60%{content: "D |";}
+61%{content: "De |";}
+62%{content: "Des |";}
+63%{content: "Desi |";}
+64%{content: "Desig |";}
+65%{content: "Design |";}
+66%{content: "Designe |";}
+67%{content: "Designer |";}
+82%{content: "Designer |";}
+83%{content: "Designe |";}
+84%{content: "Design |";}
+85%{content: "Desig |";}
+86%{content: "Desi |";}
+87%{content: "Des |";}
+88%{content: "De |";}
+89%{content: "D |";}
+90%{content: "L |";}
+91%{content: "La |";}
+92%{content: "Larr |";}
+93%{content: "Larry |";}
+94%{content: "Larry D |";}
+95%{content: "Larry Da |";}
+96%{content: "Larry Dan |";}
+97%{content: "Larry Dani |";}
+98%{content: "Larry Danie |";}
+99%{content: "Larry Daniel |";}
+100%{content: "Larry Daniels |";}
+                            /* ! End Animation ! */
+}
+
+#home .home-content .icons .icon{
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width:768px){
+    #home .home-content .h1-home{
+        font-size: 30px;
+    }
+
+    #home .home-content .h1-home::after{
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:992px){
+    #home .home-content .h1-home{
+        font-size: 44px;
+    }
+
+    #home .home-content .h1-home::after{
+        font-size: 44px;
+    }
+}
+
+
+                             /* & End Home Section & */
+
+/* --------------------------------------------------------------------------------------------------- */
+
+                             /* & Start About Section & */
+#about .image-about::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    background-image: url(../imgs/dots.png);
+    left: 0rem;
+    bottom: -1.875rem;
+    z-index: -1;
+}
+#about .col-lg-7{
+    max-width:670px;
+
+}
+#about .p-about{
+    font-size: .9375rem;
+    margin-bottom: 35px;
+}
+
+#about .progress{
+    background-color: #F7F7F7;
+    height: 25px;
+    padding: 5px 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.15) inset;
+}
+
+#about .progress .item1{
+    background-color: black;
+    position: absolute;
+    width: 95%;
+    height: 25px;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+#about .progress .h6-edit{
+    font-size: 13px;
+}
+
+#about .progress .item1 ::after{
+    content: "95%";
+    position: absolute;
+    right:0;
+    padding-right: 7px;
+}
+
+#about .progress .item2{
+    background-color: black;
+    position: absolute;
+    width: 80%;
+    height: 25px;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+#about .progress .item2 ::after{
+    content: "80%";
+    position: absolute;
+    right:0;
+    padding-right: 7px;
+}
+
+#about .progress .item3{
+    background-color: black;
+    position: absolute;
+    width: 90%;
+    height: 25px;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+}
+
+#about .progress .item3 ::after{
+    content: "90%";
+    position: absolute;
+    right:0;
+    padding-right: 7px;
+}
+
+#about .btn1-hover{
+    color: #eee;
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    font-size: .8125rem;
+    transition: all 0.5s;
+}
+
+#about .btn1-hover:hover{
+    background-color: transparent !important;
+    color: #343434
+}
+
+#about .btn2-hover{
+    color: #1c1c1c;
+    padding: 10px 30px;
+    border: 1px solid #1c1c1c;
+    font-size: .8125rem;
+    transition: all 0.5s;
+}
+
+#about .btn2-hover:hover{
+    background-color: black!important;
+    color: #eee;
+}
+
+@media screen and (max-width:991px){
+    #about .image-about{
+        margin-bottom: 50px;
+    }
+
+    #about h3{
+        margin-top: 20px;
+    }
+
+}
+
+                            /* & End About Section & */
+/* ---------------------------------------------------------------------------------------------------- */
+
+                            /* & Start Services Section & */
+#services .layer-services{
+    box-shadow:0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    padding-left: 35px;
+    padding-right: 35px;
+
+}
+
+#services .layer-services .icon{
+    width: 4.375rem;
+    height: 4.375rem;
+    background: #f4f4f4;
+    font-size: 1.875rem;
+    transition: all 0.5s;
+}
+
+#services .layer-services:hover .icon{
+    background-color: #1C1C1C;
+}
+
+#services .layer-services .icon i{
+    transition: all 0.5s;
+}
+
+#services .layer-services:hover .icon i{
+    color: #EEEEEE;
+}
+
+
+#services h6{
+    font-weight: 800;
+    margin-bottom: .9375rem;
+}
+
+#services .p-services{
+    font-size: 14px;
+    word-spacing: 2px;
+    color: #748182;
+    line-height: 1.6;;
+}
+                             /* & End Services Section & */
+/* --------------------------------------------------------------------------------------------------- */
+
+                             /* & Start Works Section & */
+#works .nav-pills .nav-link.active,
+#works .nav-pills .nav-link{
+    color: black;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: transparent;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#works .nav-pills .nav-link::after{
+    content:"";
+    position: absolute;
+    width: 0;
+}
+
+#works .nav-pills .nav-link.active::after{
+    content:"";
+    width: 98%;
+    height: 2px;
+    background: #111;
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    transition: all 0.4s;
+}
+
+#works .layer-works .opacity-layer{
+    background: rgba(255, 255, 255, 0.95);
+    inset: 5px;
+    transform: translateY(12px);
+    transition: all 0.5s;
+    opacity:0;
+}
+
+#works .layer-works:hover .opacity-layer{
+    opacity:1;
+    transform: translateY(0);
+}
+
+#works .layer-works .opacity-layer .content-layer .social-icons .icon{
+    width: 33px;
+    height: 33px;
+    line-height: 28px;
+    border-radius: 50%;
+    border: 1px solid #111;
+    background: #111;
+    margin-right: 5px;
+    transition: all 0.4s;
+}
+
+#works .layer-works .opacity-layer .content-layer .social-icons .icon a{
+    color: #eee;
+    transition: all 0.4s;
+}
+
+#works .layer-works .opacity-layer .content-layer h6{
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    transform: translateY(-17px);
+    transition: all 0.6s;
+}
+
+#works .layer-works:hover .opacity-layer .content-layer h6{
+    transition: all 0.4s;
+    transform: translateY(0);
+}
+#works .layer-works .opacity-layer .content-layer .social-icons .icon:hover{
+    background-color: transparent;
+    color: #000;
+}
+
+#works .layer-works .opacity-layer .content-layer .social-icons .icon:hover .a1,
+#works .layer-works .opacity-layer .content-layer .social-icons .icon:hover .a2{
+    color: #000;
+}
+
+                             /* & End Works Section & */
+/* --------------------------------------------------------------------------------------------------- */
+
+                             /* & Start clients Section & */
+#clients .icon{
+    width: 80px;
+    height: 80px;
+}
+
+#clients .carousel-inner p:first-of-type {
+    line-height: 1.6;
+    margin: 0;
+    font-size: .9375rem;
+    color: #748182;
+    max-width: 56.25rem;
+}
+
+#clients .carousel-inner p:nth-of-type(2){
+    font-size: .75rem;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 1.875rem;
+}
+
+#clients .carousel-indicators [data-bs-target]{
+    background-color: gray;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-radius: 50%;
+    margin-right:  0.625rem;
+}
+                            /* & End clients Section & */
+/* ----------------------------------------------------------------------------------------------------- */
+
+                            /* & Start middle Section & */
+#middle h3{
+    font-size: 1.875rem;
+    font-weight: 900;
+    margin-bottom: 0.9375rem;
+    line-height: 1.1;
+}
+
+#middle p{
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 1.875rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #748182;
+}
+                            /* & End middle Section & */
+/* ----------------------------------------------------------------------------------------------------------- */
+
+                            /* & Start team Section & */
+#team .card .card-body {
+   background-color: #5B5B5B;
+}
+
+#team .card .image-content .layer-opacity{
+    background-color: rgba(255, 255, 255, 0.95);
+    inset: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+#team .card:hover .image-content .layer-opacity{
+    opacity: 1;
+    transform: rotateY(0deg) scale(1, 1);
+}
+
+#team .card .image-content img{
+    transition: all 0.5s;
+}
+
+#team .card .image-content:hover img{
+    transform: scale(1.2);
+}
+
+#team .card .layer-opacity .social-icons .icon{
+    height: 40px;
+    width: 40px;
+    font-size: 1.25rem;
+    border: 1px solid #000;
+    background-color: #000;
+}
+
+#team .card .layer-opacity .social-icons .icon:hover{
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+#team .card .layer-opacity .social-icons .icon:hover a{
+    color: #000 !important;
+}
+
+                            /* & End team Section & */
+/* ---------------------------------------------------------------------------------------------------- */
+
+                            /* & Start Contact Section & */
+#contact .contact-content .icon{
+    font-size: 1.5625rem;
+    width: 3.75rem;
+    height: 3.75rem;
+    line-height: 3.75rem;
+    background: #f4f4f4;
+    transition: all 0.5s;
+}
+
+#contact .contact-content:hover .icon{
+    background-color: #1C1C1C;
+    color: #EEEEEE;
+}
+
+#contact .contact-content p{
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    color: #748182;
+}
+
+#contact form input{
+    width: 100%;
+    background: #f4f4f4;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    outline: 0;
+}
+
+#contact form textarea{
+    width: 100%;
+    max-width: 100%;
+    height: 10rem;
+    max-height: 10rem;      /* & user not control of width and height of textarea & */
+    background: #f4f4f4;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    outline: 0;
+}
+
+#contact button{
+    font-size: .8125rem;
+    color: #eee;
+    background: #1c1c1c;
+    padding: 0.625rem 2.5rem;
+    border: .0625rem solid #1c1c1c;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+#contact button:hover{
+    color: #343434;
+    background-color:transparent;
+}
+
+                            /* & End Contact Section & */
+/* ------------------------------------------------------------------------------------------------------ */
+
+                            /* & Start Footer Section & */
+#footer p{
+    color: #748182;
+    line-height: 1.6;
+    font-size: .8125rem;
+    word-spacing: .125rem;
+}
+
+                            /* & End Footer Section & */
+
+
+                          /* ~   E          N            D   ~ */
